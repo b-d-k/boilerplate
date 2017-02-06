@@ -1,0 +1,26 @@
+// ** Custom Styes here **
+$breakpoints:(
+    sm: 600px,
+    md: 800px,
+    lg: 1025px,
+    xl: 1400px
+);
+
+body{
+    // edit mode bg colors:
+    lost-utility: edit;
+}
+
+.test{
+    @media(min-width: map-get($breakpoints, sm) ){
+        lost-center: 550px;
+
+        div{
+            lost-column: 1/3;
+        }
+    }
+
+    @media(min-width: map-get($breakpoints, lg) ){
+        lost-center: 980px;
+    }
+}
