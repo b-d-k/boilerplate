@@ -1,0 +1,8 @@
+*.egg-info
+dist/
+node_modules/
+
+.DS_STORE
+.idea/
+.tmp
+.vscode/settings.json

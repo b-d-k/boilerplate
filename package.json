@@ -1,0 +1,44 @@
+{
+  "author": "b-d-k",
+  "browserslist": [
+    "last 2 version",
+    "> 3%",
+    "ie 11",
+    "not dead"
+  ],
+  "bugs": {
+    "url": "https://github.com/b-d-k/boilerplate2/issues"
+  },
+  "description": "A simple boilerplate with grunt, sass, lost-grid, babel, etc.",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "cssnano": "^4.1.8",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "http": "0.0.0",
+    "lost": "^8.3.0",
+    "run-sequence": "^2.2.1",
+    "st": "^1.2.2",
+    "stylelint": "^9.10.1",
+    "stylelint-order": "^2.0.0"
+  },
+  "homepage": "https://github.com/b-d-k/boilerplate2",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "boilerplate2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b-d-k/boilerplate2.git"
+  },
+  "scripts": {
+    "build-lib": "gulp build"
+  },
+  "version": "1.0.0"
+}
