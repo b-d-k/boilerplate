@@ -1,20 +1,15 @@
-# Boilerplate 2
-> A simple gulp/html/scss/grid template
+# Boilerplate
 
-A simple boilerplate for experimenting, creating POCs or evem small projects.
+A simple Webpack boilerplate for experimenting, creating POCs, or whatever.
+Includes a bunch of opinionated linter settings.
 
 ## Usage
 `npm install` for the dependencies
 
-`gulp` for watching/server/livereload
+`npm run start` for watching/server/livereload
 
-`gulp build` to put everything into `/dist`
-
+No build script
 
 ## Includes
 * sass compiling
-* autoprefixer
-* normalize
-* lost-grid (http://lostgrid.org/)
-* babel with env preset
-* stylelint and stylelint-order
+* Vue
