@@ -1,1 +1,5 @@
-// Scss entry file. Import your personal or vendor files here.
+// Scss entry file.
+
+@import './vars.scss';
+@import './reset.scss';
+@import './layout.scss';

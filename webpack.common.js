@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -9,13 +10,9 @@ module.exports = {
     'main': path.resolve(__dirname, 'src/index.js'),
   },
 
-  mode: 'development',
-
-  devtool: 'inline-source-map',
-
-  devServer: {
-    contentBase: "./dist",
-    // writeToDisk: true, // good to turn on sometimes
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
   },
 
   module: {
@@ -74,7 +71,7 @@ module.exports = {
             },
           }
         ],
-      },
+      }
 
       // {
       //   test: /\.(png|jpg|gif)$/,
@@ -124,11 +121,6 @@ module.exports = {
     ],
   },
 
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-  },
-
   resolve: {
     alias: {
       // String template workaround https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
@@ -143,7 +135,16 @@ module.exports = {
       {
         filename: '[name].css',
       }
-    )
+    ),
+    new CopyPlugin({
+      patterns: [
+        {
+          // "Flat" copies html files
+          from: 'src/**/*.html',
+          to: '[name][ext]',
+        }
+      ],
+    })
   ],
 
 };
