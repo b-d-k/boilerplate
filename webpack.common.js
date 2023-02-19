@@ -2,7 +2,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VueLoaderPlugin } = require('vue-loader');
+const webpack = require('webpack');
 
 module.exports = {
 
@@ -124,7 +125,7 @@ module.exports = {
   resolve: {
     alias: {
       // String template workaround https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
-      'vue$': path.join(__dirname, 'node_modules/vue/dist/vue.esm.js'),
+      'vue$': path.join(__dirname, 'node_modules/vue/dist/vue.esm-bundler.js'),
     },
   },
 
@@ -144,6 +145,10 @@ module.exports = {
           to: '[name][ext]',
         }
       ],
+    }),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false,
     })
   ],
 

@@ -4,7 +4,7 @@
     "es6": true,
     "node": true
   },
-  "extends": "plugin:vue/recommended",
+  "extends": "plugin:vue/vue3-recommended",
   "globals": {
     "$": true,
     "ArcCoreObject": true,
