@@ -6,9 +6,9 @@ Includes a bunch of opinionated linter settings.
 ## Usage
 `npm install` for the dependencies
 
-`npm run start` for watching/server/livereload
+`npm run dev` for watching/server/livereload
 
-No build script
+`npm run prod` for prod build
 
 ## Includes
 * sass compiling
